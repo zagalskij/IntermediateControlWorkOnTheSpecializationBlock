@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e46ab08f-6c5d-4f8b-b1d1-d3bb4c135c40" name="Changes" comment="" />
+    <list default="true" id="e46ab08f-6c5d-4f8b-b1d1-d3bb4c135c40" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/Data/AToy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/Data/AToy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/Data/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/Data/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/Data/Designer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/Data/Designer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/Data/Doll.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/Data/Doll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/Data/ToyStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/Data/ToyStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task2/src/main/java/ru/zagalskij/api/View.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,13 +29,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/zagalskij/GIT/IntermediateControlWorkOnTheSpecializationBlock/Task2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/zagalskij/GIT/IntermediateControlWorkOnTheSpecializationBlock/Task1&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
