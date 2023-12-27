@@ -1,0 +1,2 @@
+Id:1 Name:Maserati Price:300.00 Frequency:20 Type:Car Model:G500
+Id:2 Name:Bugati Price:500.00 Frequency:100 Type:Car Model:Veyron

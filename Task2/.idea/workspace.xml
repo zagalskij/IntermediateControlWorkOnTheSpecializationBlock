@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ba8fb48-1cda-4332-9f5c-2ac047770ce4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Programm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Data/AToy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Data/AToy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Data/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Data/Car.java" afterDir="false" />
@@ -15,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Data/ToyStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Data/ToyStore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Programm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Programm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +32,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2Zq8hLOSLlA7MF9SRFFDhmOoVSN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -45,7 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/zagalskij/GIT/ExceptionsInProgrammingAndTheirHanding/src/main/java/homework3/View.java",
+    "last_opened_file_path": "D:/GIT/IntermediateControlWorkOnTheSpecializationBlock/Task2",
     "onboarding.tips.debug.path": "/home/zagalskij/GIT/IntermediateControlWorkOnTheSpecializationBlock/Task2/src/main/java/org/example/Main.java"
   }
 }]]></component>
@@ -95,73 +98,33 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Presenter.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Presenter.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Presenter.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Presenter.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Presenter.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Presenter.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Presenter.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Presenter.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Database.java</url>
-          <line>43</line>
+          <line>44</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Database.java</url>
-          <line>44</line>
+          <line>45</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Database.java</url>
-          <line>42</line>
+          <line>43</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Database.java</url>
-          <line>41</line>
+          <line>42</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Database.java</url>
-          <line>19</line>
+          <line>20</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Database.java</url>
-          <line>20</line>
+          <line>21</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>

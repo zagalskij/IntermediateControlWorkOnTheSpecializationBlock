@@ -3,6 +3,7 @@ package ru.zagalskij.api;
 import ru.zagalskij.api.Data.*;
 
 import java.io.*;
+import java.util.List;
 
 public class Database {
     private String databaseFileName;
@@ -14,11 +15,13 @@ public class Database {
     }
 
 
-    public void saveToyToDatabase(AToy atoy) {
+    public void saveToysToDatabase() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(databaseFileName, true))) {
-            String line = buildLineFromToy(atoy);
-            writer.write(line);
-            writer.newLine();
+            for (AToy atoy : toyStore.getListAtoy()) {
+                String line = buildLineFromToy(atoy);
+                writer.write(line);
+                writer.newLine();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

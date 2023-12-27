@@ -18,7 +18,7 @@ public abstract class AToy {
    }
 
 
-   public AToy(String name, float price, int frequency, int countToy) {
+   public AToy(String name, float price, int frequency) {
       this.name = name;
       this.price = price;
       this.frequency = frequency;

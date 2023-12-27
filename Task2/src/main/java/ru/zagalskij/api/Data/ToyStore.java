@@ -12,6 +12,7 @@ public class ToyStore {
     private List<AToy> listAtoy;
     private List<AToy> prizeToys = new ArrayList<>();
 
+
     public ToyStore(String name) {
         this.name = name;
         this.listAtoy = new ArrayList<>();
@@ -43,7 +44,7 @@ public class ToyStore {
                 System.out.println("No prize toys available to receive.");
             }
         }
-    public void editToy(int id, String newName, float newPrice, int newFrequency, int newCountToy, String newAttribute) {
+    public void editToy(int id, String newName, float newPrice, int newFrequency, String newAttribute) {
         for (AToy toy : listAtoy) {
             if (toy.getId() == id) {
                 if (toy instanceof Car) {
