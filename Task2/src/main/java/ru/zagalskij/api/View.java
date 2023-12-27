@@ -20,7 +20,9 @@ public class View {
     }
     public int getValue(String title) {
         System.out.printf("%s", title);
-        return in.nextInt();
+        int value = in.nextInt();
+        in.nextLine();
+        return value;
     }
     public String getString(String title) {
         System.out.printf("%s", title);
@@ -40,6 +42,8 @@ public class View {
     }
     public int getCountToy(){
         System.out.println("Enter the number of toys to add");
-        return in.nextInt();
+        int value = in.nextInt();
+        in.nextLine();
+        return value;
     }
 }

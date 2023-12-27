@@ -1,0 +1,8 @@
+car,234,00,80,0,Designer,
+car,234,00,20,0,Car,
+car2,235,00,30,0,Car,
+car,243,00,34,0,Car,maserati
+Name: dfdf,23,00,43,0,Car,efef
+Name: efef Price: 232,00 Frequency:43 CountToy: 0 Type: Car Attribute:efef
+Name:rfrfr Price:343,00 Frequency:13 CountToy:0 Type:Car Model::efeff
+Id:1 Name:rfrf Price:2424,00 Frequency:34 CountToy:0 Type:Car Model:rgrg

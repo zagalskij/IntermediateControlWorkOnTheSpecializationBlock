@@ -15,4 +15,14 @@ public class Designer extends AToy{
     public String getRecommendedAge() {
         return recommendedAge;
     }
+    public String getTypeAttribute() {
+        return recommendedAge;
+    }
+
+    @Override
+    public String toString() {
+        return "Designer{" +
+                "recommendedAge='" + recommendedAge + '\'' +
+                '}';
+    }
 }

@@ -6,7 +6,8 @@ public abstract class AToy {
    private String name;
    private float price;
    private int frequency;
-   private int countToy;
+   public abstract String getTypeAttribute();
+
 
    public float getPrice() {
       return price;
@@ -16,9 +17,6 @@ public abstract class AToy {
       return frequency;
    }
 
-   public int getCountToy() {
-      return countToy;
-   }
 
    public AToy(String name, float price, int frequency, int countToy) {
       this.name = name;
@@ -27,9 +25,6 @@ public abstract class AToy {
       this.id=nextId++;
    }
 
-   public void setCountToy(int countToy) {
-      this.countToy = countToy;
-   }
 
    public static void setNextId(int nextId) {
       AToy.nextId = nextId;
@@ -58,4 +53,15 @@ public abstract class AToy {
    public String getName() {
       return name;
    }
+
+   @Override
+   public String toString() {
+      return "AToy{" +
+              "id=" + id +
+              ", name='" + name + '\'' +
+              ", price=" + price +
+              ", frequency=" + frequency +
+              '}';
+   }
 }
+

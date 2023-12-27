@@ -15,4 +15,13 @@ public class Doll extends AToy {
     public String getMaterial() {
         return material;
     }
+    public String getTypeAttribute() {
+        return material;
+    }
+    @Override
+    public String toString() {
+        return "Doll{" +
+                "material='" + material + '\'' +
+                '}';
+    }
 }

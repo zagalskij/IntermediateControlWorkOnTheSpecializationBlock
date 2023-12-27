@@ -19,4 +19,14 @@ public class Car extends AToy{
     public String getModel() {
         return model;
     }
+    public String getTypeAttribute() {
+        return model;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + model + '\'' +
+                '}';
+    }
 }
