@@ -87,9 +87,9 @@ public class Presenter {
             }
             switch (choice) {
                 case 1:
-                    this.database = new Database();
                     String name= view.getString("Enter the name of database:\n");
                     this.toyStore = new ToyStore(name);
+                    this.database = new Database(name + ".txt", this.toyStore);
                     this.database.loadToysFromDatabase(name,this.toyStore);
                     break;
                 case 2:
@@ -116,6 +116,7 @@ public class Presenter {
                     break;
                 case 9:
                     Raffle();
+                    break;
                 default:
                     throw new IllegalArgumentException("Wrong choice!!!");
             }

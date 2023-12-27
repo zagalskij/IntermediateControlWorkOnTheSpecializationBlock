@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2ba8fb48-1cda-4332-9f5c-2ac047770ce4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarToy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CarToy.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Data/ToyStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Data/ToyStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Toy Kingdom.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Toy Kingdom.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zagalskij/api/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

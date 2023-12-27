@@ -90,7 +90,7 @@ public class Database {
     public void savePrizeToysToFile() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("prize_toys.txt", true))) {
             for (AToy prizeToy : toyStore.getPrizeToys()) {
-                String line = String.format("Id:%d Name:%s Price:%.2f Frequency:%d Type:%s %s",
+                String line = String.format("Id:%d Name:%s Price:%.2f Frequency:%d Type:%s",
                         prizeToy.getId(), prizeToy.getName(), prizeToy.getPrice(), prizeToy.getFrequency(), prizeToy.getTypeAttribute());
                 writer.write(line);
                 writer.newLine();
