@@ -42,11 +42,5 @@ public class View {
         in.nextLine();
         return value;
     }
-    public int getCountToy(){
-        System.out.println("Enter the number of toys to add");
-        int value = in.nextInt();
-        in.nextLine();
-        return value;
-    }
 
 }

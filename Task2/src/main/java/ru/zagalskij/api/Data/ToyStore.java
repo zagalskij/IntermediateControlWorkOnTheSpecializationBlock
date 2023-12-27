@@ -12,38 +12,52 @@ public class ToyStore {
     private List<AToy> listAtoy;
     private List<AToy> prizeToys = new ArrayList<>();
 
+    public List<AToy> getPrizeToys() {
+        return prizeToys;
+    }
 
     public ToyStore(String name) {
         this.name = name;
         this.listAtoy = new ArrayList<>();
     }
-    public AToy selectPrizeToy() {
-        // Метод для выбора призовой игрушки
-        if (!listAtoy.isEmpty()) {
-            AToy prizeToy = listAtoy.remove(0); // Получаем первую игрушку из списка
-            prizeToys.add(prizeToy); // Добавляем в список призовых игрушек
-            // Теперь записываем информацию об этой игрушке в текстовый файл
-            System.out.println("Prize toy selected: " + prizeToy.getName());
-            return  prizeToy;
-        } else {
-            System.out.println("No toys available to select as a prize.");
-            return null;
+    public AToy selectPrizeToy(int id) {
+        AToy prizeToy = null;
+
+        for (AToy toy : listAtoy) {
+            if (toy.getId() == id) {
+                prizeToy = toy;
+                break;
+            }
         }
+        if (prizeToy != null) {
+            listAtoy.remove(prizeToy);
+            prizeToys.add(prizeToy);
+            System.out.println("Prize toy selected: " + prizeToy.getName());
+        } else {
+            System.out.println("No toy with id " + id + " available to select as a prize.");
+        }
+
+        return prizeToy;
     }
     public void addToy(AToy atoy){
         listAtoy.add(atoy);
     }
 
-        public void getPrizeToy() {
-            // Метод для получения призовой игрушки
-            if (!prizeToys.isEmpty()) {
-                AToy prizeToy = prizeToys.remove(0); // Удаляем первую игрушку из списка призовых
-                System.out.println("You received a prize toy: " + prizeToy.getName());
-                // Тут можно добавить логику для уменьшения количества призовых игрушек, если это необходимо
-            } else {
-                System.out.println("No prize toys available to receive.");
+    public void getPrizeToy() {
+        if (!prizeToys.isEmpty()) {
+            AToy prizeToy = prizeToys.get(0);
+            for (AToy toy : prizeToys) {
+                if (toy.getFrequency() > prizeToy.getFrequency()) {
+                    prizeToy = toy;
+                }
             }
+
+            prizeToys.remove(prizeToy); // Удаляем выбранную призовую игрушку из списка
+            System.out.println("You received a prize toy: " + prizeToy.getName());
+        } else {
+            System.out.println("No prize toys available to receive.");
         }
+    }
     public void editToy(int id, String newName, float newPrice, int newFrequency, String newAttribute) {
         for (AToy toy : listAtoy) {
             if (toy.getId() == id) {

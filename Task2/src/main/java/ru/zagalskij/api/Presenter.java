@@ -19,13 +19,14 @@ public class Presenter {
     }
 
     public void Raffle() {
-        AToy prizeToy = this.toyStore.selectPrizeToy();
-        if (prizeToy != null) {
-            System.out.println("Prize Toy Information: " + prizeToy);
+       toyStore.getPrizeToy();
         }
 
-        // Получаем призовую игрушку и выводим информацию о ней
-        toyStore.getPrizeToy();
+
+    private void AddToyDrawing(){
+        int id = view.getValue("Enter id for adding");
+        System.out.println(toyStore.getToyTypeById(id));
+        toyStore.selectPrizeToy(id);
     }
 
     private void ButtonAddToy() {
@@ -71,34 +72,50 @@ public class Presenter {
     public void Menu() {
         while (true) {
             int choice = view.getValue("Select an action:\n" +
-                    "1. Add a store\n" +
-                    "2. Add a toy\n" +
-                    "3. Save in database\n" +
-                    "4. Edit toy\n" +
-                    "5. Make a drawing\n" +
-                    "6. Complete\n");
-            if (choice == 6) {
+                    "1. Upload an existing database\n" +
+                    "2. Add a store\n" +
+                    "3. Add a toy\n" +
+                    "4. Save in database\n" +
+                    "5. Edit tiy\n" +
+                    "6. Display thr product in the store\n"+
+                    "7. Add toy to prize\n"+
+                    "8. Save toy to prize database\n"+
+                    "9. Raffle\n"+
+                    "10. Complete\n");
+            if (choice == 10) {
                 break; // Выход из цикла, если выбрано завершение
             }
             switch (choice) {
                 case 1:
+                    this.database = new Database();
+                    String name= view.getString("Enter the name of database:\n");
+                    this.toyStore = new ToyStore(name);
+                    this.database.loadToysFromDatabase(name,this.toyStore);
+                    break;
+                case 2:
                     CreateStore();
                     CreateDatabase();
                     break;
-                case 2:
+                case 3:
                     ButtonAddToy();
                     break;
-                case 3:
+                case 4:
                     database.saveToysToDatabase();
                     break;
-                case 4:
+                case 5:
                     ButtonEditToy();
                     break;
-                case 5:
-                    Raffle();
-                    break;
                 case 6:
+                    view.DisplayTheProduct(this.toyStore);
                     break;
+                case 7:
+                    AddToyDrawing();
+                    break;
+                case 8:
+                    database.savePrizeToysToFile();
+                    break;
+                case 9:
+                    Raffle();
                 default:
                     throw new IllegalArgumentException("Wrong choice!!!");
             }
