@@ -1,0 +1,3 @@
+Id:1 Name:Maserati Price:3434.00 Frequency:20 Type:G500
+Id:2 Name:Nissan Price:2000.00 Frequency:20 Type:Almera
+Id:3 Name:Lada Price:1000.00 Frequency:100 Type:Priora

@@ -38,12 +38,9 @@ public class View {
     }
     public int getFrequency(){
         System.out.println("Enter the frequency of falling out of the toy");
-        return in.nextInt();
-    }
-    public int getCountToy(){
-        System.out.println("Enter the number of toys to add");
         int value = in.nextInt();
         in.nextLine();
         return value;
     }
+
 }
