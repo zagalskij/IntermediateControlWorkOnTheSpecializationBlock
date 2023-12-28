@@ -1,0 +1,2 @@
+Id:1 Name:Lada Price:1000,00 Frequency:80 Type:Car Model:Priora
+Id:2 Name:Nissan Price:2000,00 Frequency:10 Type:Car Model:Almera

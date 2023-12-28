@@ -3,6 +3,7 @@ package ru.zagalskij.api;
 import ru.zagalskij.api.Data.*;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Database {
@@ -30,7 +31,7 @@ public class Database {
         }
     }
     public void saveToyToDatabase(AToy atoy) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(databaseFileName, true))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("prize toys.txt", true))) {
             String line = buildLineFromToy(atoy);
             writer.write(line);
             writer.newLine();
@@ -51,7 +52,7 @@ public class Database {
             e.printStackTrace();
         }
     }
-    private AToy createToyFromLine(String line) {
+    public static AToy createToyFromLine(String line) {
         String[] parts = line.split("\\s+");
 
 
@@ -77,7 +78,7 @@ public class Database {
                 return null;
         }
     }
-    private String buildLineFromToy(AToy atoy) {
+    public static String buildLineFromToy(AToy atoy) {
         String type = atoy.getClass().getSimpleName();
         String attribute;
         String nameAttribute;
@@ -120,4 +121,5 @@ public class Database {
             e.printStackTrace();
         }
     }
+
 }

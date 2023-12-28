@@ -5,7 +5,7 @@ import ru.zagalskij.api.Data.*;
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Presenter {
-    private View view = new View();
+    private final View view = new View();
     private ToyStore toyStore;
     private Database database;
     private AToy toy;
@@ -25,9 +25,12 @@ public class Presenter {
         }
 
 
-    private void AddToyDrawing(int id){
+    private void AddToyDrawing(){
+        int id = view.getValue("Enter id for adding");
+        System.out.println(toyStore.getToyTypeById(id));
         toyStore.selectPrizeToy(id);
     }
+
 
     private void ButtonAddToy() {
         while (true) {
@@ -40,26 +43,25 @@ public class Presenter {
                 break; // Выход из цикла, если выбрано завершение
             }
             switch (choice) {
-                case 1:
+                case 1 -> {
                     Car car = new Car(view.getName(), view.getPrice(), view.getFrequency(),
-                             view.getString("Enter the machine model:"));
+                            view.getString("Enter the machine model:"));
                     this.toyStore.addToy(car);
-                    this.toy = car;
-                    break;
-                case 2:
+                    database.saveToyToDatabase(car);
+                }
+                case 2 -> {
                     Designer designer = new Designer(view.getName(), view.getPrice(), view.getFrequency(),
                             view.getString("Enter the recommended age:"));
                     this.toyStore.addToy(designer);
-                    this.toy = designer;
-                    break;
-                case 3:
+                    database.saveToyToDatabase(designer);
+                }
+                case 3 -> {
                     Doll doll = new Doll(view.getName(), view.getPrice(), view.getFrequency(),
                             view.getString("Enter the doll's material:"));
                     toyStore.addToy(doll);
-                    this.toy = doll;
-                    break;
-                default:
-                    throw new IllegalArgumentException("Wrong choice!!!");
+                    database.saveToyToDatabase(doll);
+                }
+                default -> throw new IllegalArgumentException("Wrong choice!!!");
             }
         }
     }
@@ -87,43 +89,27 @@ public class Presenter {
                 break; // Выход из цикла, если выбрано завершение
             }
             switch (choice) {
-                case 1:
-                    String name= view.getString("Enter the name of database:\n");
+                case 1 -> {
+                    String name = view.getString("Enter the name of database:\n");
                     this.toyStore = new ToyStore(name);
                     this.database = new Database(name + ".txt", this.toyStore);
-                    this.database.loadToysFromDatabase(name,this.toyStore);
-                    break;
-                case 2:
+                    this.database.loadToysFromDatabase(name, this.toyStore);
+                }
+                case 2 -> {
                     CreateStore();
                     CreateDatabase();
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     ButtonAddToy();
-                    database.saveToyToDatabase(this.toy);
-                    break;
-                case 4:
-                    ButtonEditToy();
-                    break;
-                case 5:
-                    view.DisplayTheProduct(this.toyStore);
-                    break;
-                case 6:
-                    int id = view.getValue("Enter id for adding");
-                    System.out.println(toyStore.getToyTypeById(id));
-                    AddToyDrawing(id);
-                    for (AToy toy : toyStore.getListAtoy()) {
-                        if (toy.getId() == id) {
-                            this.prizeToy = toy;
-                            break;
-                        }
-                    }
-                    database.saveToyToDatabase(prizeToy);
-                    break;
-                case 7:
-                    Raffle();
-                    break;
-                default:
-                    throw new IllegalArgumentException("Wrong choice!!!");
+                }
+                case 4 -> ButtonEditToy();
+                case 5 -> view.DisplayTheProduct(this.toyStore);
+                case 6 -> {
+                    AddToyDrawing();
+                    database.saveToyToDatabase(toyStore.getCurrentPrizeToy());
+                }
+                case 7 -> Raffle();
+                default -> throw new IllegalArgumentException("Wrong choice!!!");
             }
         }
 

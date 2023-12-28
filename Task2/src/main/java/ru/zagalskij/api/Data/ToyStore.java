@@ -1,7 +1,12 @@
 package ru.zagalskij.api.Data;
 
+import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.*;
+
+import static ru.zagalskij.api.Database.buildLineFromToy;
+import static ru.zagalskij.api.Database.createToyFromLine;
 
 public class ToyStore {
     private AToy atoy;
@@ -11,6 +16,7 @@ public class ToyStore {
     private String name;
     private List<AToy> listAtoy;
     private List<AToy> prizeToys = new ArrayList<>();
+    private AToy prizeToy;
 
     public List<AToy> getPrizeToys() {
         return prizeToys;
@@ -22,33 +28,64 @@ public class ToyStore {
     }
     public AToy selectPrizeToy(int id) {
 
-        if (prizeToy != null) {
-            listAtoy.remove(prizeToy);
-            prizeToys.add(prizeToy);
-            System.out.println("Prize toy selected: " + prizeToy.getName());
+        for (AToy toy : listAtoy) {
+            if (toy.getId() == id) {
+                this.prizeToy = toy;
+                break;
+            }
+        }
+        if (this.prizeToy != null) {
+            listAtoy.remove(this.prizeToy);
+            prizeToys.add(this.prizeToy);
+            System.out.println("Prize toy selected: " + this.prizeToy.getName());
         } else {
             System.out.println("No toy with id " + id + " available to select as a prize.");
         }
 
-        return prizeToy;
+        return this.prizeToy;
     }
     public void addToy(AToy atoy){
         listAtoy.add(atoy);
     }
+    public AToy getCurrentPrizeToy() {
+        return prizeToy;
+    }
 
     public void getPrizeToy() {
-        if (!prizeToys.isEmpty()) {
-            AToy prizeToy = prizeToys.get(0);
-            for (AToy toy : prizeToys) {
-                if (toy.getFrequency() > prizeToy.getFrequency()) {
-                    prizeToy = toy;
+        try (BufferedReader reader = new BufferedReader(new FileReader("prize toys.txt"))) {
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                AToy toy = createToyFromLine(line);
+                if (toy != null) {
+                    this.prizeToys.add(toy);
                 }
             }
 
-            prizeToys.remove(prizeToy); // Удаляем выбранную призовую игрушку из списка
-            System.out.println("You received a prize toy: " + prizeToy.getName());
-        } else {
-            System.out.println("No prize toys available to receive.");
+            if (!this.prizeToys.isEmpty()) {
+                this.prizeToy = this.prizeToys.get(0);
+                for (AToy toy : this.prizeToys) {
+                    if (toy.getFrequency() > this.prizeToy.getFrequency()) {
+                        this.prizeToy = toy;
+                    }
+                }
+
+                this.prizeToys.remove(this.prizeToy); // Remove the selected prize toy from the list
+                System.out.println("You received a prize toy: " + this.prizeToy.getName());
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter("prize toys.txt"))) {
+                    for (AToy updatedToy : this.prizeToys) {
+                        String updatedLine = buildLineFromToy(updatedToy);
+                        writer.write(updatedLine);
+                        writer.newLine();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                System.out.println("No prize toys available to receive.");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
     public void editToy(int id, String newName, float newPrice, int newFrequency, String newAttribute) {
